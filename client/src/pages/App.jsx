@@ -1,8 +1,5 @@
 import React, { section, useState } from 'react'
-import { Link } from 'react-router-dom'
 import './App.css'
-// import { TouchableOpacity, Text } from 'react-native';
-// import { useTheme } from '@react-navigation/native';
 
 const App = () => {
 
@@ -10,13 +7,11 @@ const App = () => {
     window.location.href = '/about'
   }
 
+  const handleNavigateToCoursesTakenPage = () => {
+    window.location.href = '/courses_taken'
+  }
+
   document.body.style.backgroundColor = "#7e57c2";
-
-  // const theme = useTheme();
-  // const isMatch = useMediaQuery(theme.breakpoints.down('md'))
-
-  // // Subset of props, to illustrate the idea.
-  // const config = isMatch ? {fontSize: 26} : {fontSize: 30};
 
   return(
     <section className='flex-wrapper'>
@@ -30,8 +25,11 @@ const App = () => {
         <div>
           <h2>Hi, my name is Chanasorn Howattanakulphong</h2> <br />
           <h1>I'm a Software Engineeering student at KMITL</h1> <br />
-          <button onClick={handleNavigateToAboutPage} className='bg-DeepPurple-500'>
+          <button onClick={handleNavigateToAboutPage} className='bg-DeepPurple-500 hover:shadow-lg hover:rounded hover:overflow-hidden'>
               Navigate to about page.
+          </button>
+          <button onClick={handleNavigateToCoursesTakenPage} className='bg-DeepPurple-500 hover:shadow-lg hover:rounded hover:overflow-hidden'>
+              Navigate to courses taken page.
           </button>
         </div>
       </div>

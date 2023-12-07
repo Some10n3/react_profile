@@ -1,10 +1,9 @@
 import React, { section, useState } from 'react'
-import { Link } from 'react-router-dom'
+
 import './App.css'
 
 const App = () => {
 
-    // document.body.style.backgroundColor = "#2d283e";
 
     return(
         <section>
@@ -17,7 +16,7 @@ const App = () => {
             <h1 className=' md:py-20
                             py-10'>
 
-                Coding experience</h1>
+                Web developing experience</h1>
             <div className='md:grid-cols-3
                             grid grid-cols-1 gap-y-8 min-h-fit'>
 
@@ -63,6 +62,17 @@ const App = () => {
                     <h2>Backend</h2>
                 </div>
 
+                <div className='col-span-3'>
+                    <h2>Database</h2>
+                </div>
+
+            </div>
+            <h1 className=' md:py-20
+                            py-10'>
+
+                Other coding experiences</h1>
+            <div className='md:grid-cols-3'>
+                
             </div>
         </section>
     )

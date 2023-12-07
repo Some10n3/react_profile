@@ -1,25 +1,36 @@
-import express from "express";
+import express from "express"
+import mysql from "mysql"
+import cors from "cors"
 
-const app = express();
+const app = express()
 
-app.listen(5174, () => 
-  console.log('Server running on port 5174')
-);
+app.use(express.json())
 
-// Parse incoming requests with JSON payloads
-// app.use(bodyParser.json());
+app.use(cors())
 
-// Handle GET request
-app.get('/api/data', (req, res) => {
-  // Logic to fetch data from a database or another source
-  const data = { message: 'This is a GET request' };
-  res.json(data);
-});
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "Some10n3",
+  database: "profile_database"
+})
 
-// Handle POST request
-app.post('/api/data', (req, res) => {
-  // Process incoming data from the request body
+app.listen(8080, () => 
+  console.log('Server running on port 8080')
+)
+
+app.get('/', (req, res) => {
   const receivedData = req.body;
-  // Logic to handle the received data (e.g., store in a database)
   res.json({ message: 'Data received successfully' });
-});
+})
+
+app.get('/courses', (req, res) => {
+  db.query("SELECT * FROM profile_database.courses", (err, result) => {
+    if (err) {
+      console.log(err)
+    } else {
+      res.send(result)
+      // console.log(result)
+    }
+  })
+})
