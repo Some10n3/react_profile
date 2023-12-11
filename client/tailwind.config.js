@@ -1,4 +1,5 @@
 module.exports = ({
+  darkMode: 'class',
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
@@ -6,8 +7,8 @@ module.exports = ({
   plugins: [],
   theme: {
     maxHeight: {
-      'max_icon': '50%',
-      'min_icon': '40%',
+      'max_icon': '40%',
+      'min_icon': '30%',
     },
     extend: {
       colors: {
@@ -35,6 +36,9 @@ module.exports = ({
           800: "#075985",
           900: "#0c4a6e",
         },
+        font: {
+          main : "#212121",
+        }
       },
     },
   },

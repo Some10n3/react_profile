@@ -3,69 +3,80 @@
 @tailwind components;
 @tailwind utilities;
 
-.flex-wrapper{ 
-  display: flex; 
-  flex-direction: column;
-  /* justify-content: center; */
-  
-}
-
 html {
   min-height: max-content;
 }
 
 body {
+  overflow: hidden;
   min-height: fit-content;
-  background-color:#7e57c2;
-  /* #2d283e; */
-  /* background-color:#00edc2; */
+  background-color:rgb(149, 117, 205);
+  /* #5e35b1; */
+  font-family: 'Nunito', sans-serif;
+  /* font color */
+  @apply text-font-main
 }
 
-h1{
-  font-weight: bold;
+.mainDIV::-webkit-scrollbar {
+  display: none;
 }
 
-h2 {
-  font-size: 32px;
+/* Hide scrollbar for IE, Edge and Firefox */
+.mainDIV {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
-h3 {
-  font-size: 24px;
+.nav {
+  @apply text-slate-700 dark:text-slate-300
+  hover:text-slate-900 text-2xl font-semibold;
 }
 
-.flex-nav:hover{
-  filter: drop-shadow(0 0 2em #646cffaa);
+.darkBG {
+  @apply dark:bg-slate-900 dark:text-slate-400;
 }
 
-#root {
-  max-width: 1280px;
-  min-height: max-content;
-  /* background-color:#8000ff; */
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  /* background-color: grey; */
+.darkBG_children_container {
+  @apply dark:bg-slate-700 dark:text-slate-400;
 }
 
-/* body {
-  background-color: DeepPurple;
-} */
+img {
+  z-index: 0;
+}
+
+.vh {
+  height: 100vh;
+  width: 100vw;
+}
+
+#root { 
+  height: 100%; 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
 .logo {
   /* animation: logo-spin infinite 20s linear; */
   will-change: filter;
   transition: filter 300ms;
 }
+
+.logo-text {
+  font-size: 32px;
+} 
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-  animation: logo-spin infinite 1s linear;
+  filter: drop-shadow(0 0 2em #515affaa);
+  /* animation: logo-spin infinite 1s linear; */
 }
 
-@keyframes logo-spin {
+/* /* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */

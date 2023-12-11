@@ -13,12 +13,8 @@ const App = () => {
                 <h2>I'm a Software Engineeering student at KMITL</h2>
                 <h3>I'm currently interested in developing my web development skills. </h3>
             </div>
-            <h1 className=' md:py-20
-                            py-10'>
-
-                Web developing experience</h1>
-            <div className='md:grid-cols-3
-                            grid grid-cols-1 gap-y-8 min-h-fit'>
+            <h1 className=' md:py-20 py-10'>Web developing experience</h1>
+            <div className='md:grid-cols-3 grid grid-cols-1 gap-y-8 min-h-fit'>
 
                 <div className='col-span-3 font-bold'>
                     <h2>Frontend</h2>
