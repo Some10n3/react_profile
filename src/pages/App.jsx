@@ -3,13 +3,13 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
-import LightSVG from './images/lightIcon.svg'
-import DarkSVG from './images/darkIcon.svg'
-import portrait from "./images/portrait.png"
-import project1 from "./images/project_image_1.png"
-import project2 from "./images/project_image_2.png"
-import project3 from "./images/project_image_3.png"
-import project4 from "./images/project_image_4.png"
+import LightSVG from './lightIcon.svg'
+import DarkSVG from './darkIcon.svg'
+import portrait from "./portrait.png"
+import project1 from "./project_image_1.png"
+import project2 from "./project_image_2.png"
+import project3 from "./project_image_3.png"
+import project4 from "./project_image_4.png"
 
 const App = () => {
 
